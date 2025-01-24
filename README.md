@@ -32,7 +32,7 @@ You can view the live version of my portfolio here: [Insert Link to Live Site]
 To run the portfolio website locally:
 
 1. Clone the repository:
-   git clone https://github.com/yourusername/portfolio-website.git
+   git clone https://github.com/Chidari Sai Krishna/portfolio-website.git
 2. Navigate to the project directory:
    cd portfolio-website
 3. Open index.html in your browser to view the site.
