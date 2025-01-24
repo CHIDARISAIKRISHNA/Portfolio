@@ -37,15 +37,15 @@ To run the portfolio website locally:
    cd portfolio-website
 3. Open index.html in your browser to view the site.
 
-Contribution
+## Contribution
 
 If you'd like to contribute, feel free to fork the repository, create a new branch, and submit a pull request. Any suggestions and improvements are welcome!
 
-License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for more details.
 
-Contact
+## Contact
 
 You can connect with me via:
 
