@@ -41,9 +41,6 @@ To run the portfolio website locally:
 
 If you'd like to contribute, feel free to fork the repository, create a new branch, and submit a pull request. Any suggestions and improvements are welcome!
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for more details.
 
 ## Contact
 
