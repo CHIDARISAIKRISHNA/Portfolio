@@ -5,7 +5,7 @@ Welcome to my portfolio website! This Portfolio showcases my skills, projects, a
 
 ## Live Demo
 
-You can view the live version of my portfolio here: [Insert Link to Live Site]
+You can view the live version of my portfolio here: https://chidarisaikrishnaportfolio.vercel.app/
 
 ## Sections
 - **About**: A brief introduction about me, my background, and my professional journey.
