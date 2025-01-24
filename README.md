@@ -12,14 +12,14 @@ You can view the live version of my portfolio here: [Insert Link to Live Site]
 - **About Me**: Learn more about my background, skills, and professional journey.
 - **Projects**: Explore my key projects with descriptions, technologies used, and links to GitHub repositories or live demos.
 - **Contact Form**: Reach out to me through the contact form for collaboration opportunities or inquiries.
-- **Responsive Design**: The website is fully responsive and works on all device sizes.
+
 
 ## Technologies Used
 
 - **HTML**: For the structure and content of the web pages.
 - **CSS**: For styling, layout, and making the website responsive.
 - **JavaScript**: For interactivity and dynamic behavior.
-- **[Additional Tech]**: Mention any additional technologies or libraries used, such as Bootstrap, Node.js, React, etc.
+
 
 ## Installation
 
