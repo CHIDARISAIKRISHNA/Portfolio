@@ -34,7 +34,7 @@ To run the portfolio website locally:
 1. Clone the repository:
    git clone https://github.com/CHIDARISAIKRISHNA/Portfolio.git
 2. Navigate to the project directory:
-   cd portfolio-website
+    cd Portfolio
 3. Open index.html in your browser to view the site.
 
 ## Contribution
