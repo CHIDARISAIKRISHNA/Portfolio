@@ -35,7 +35,7 @@ You can view the live version of my portfolio here: https://chidarisaikrishnapor
     ```
 2. Navigate to the Project Folder:
 ```bash
-  cd Portfolio
+cd Portfolio
 ```
 3. Open the Project
 To open the index.html file, run the following command based on your operating system:<br>
