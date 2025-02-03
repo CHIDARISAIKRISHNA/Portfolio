@@ -493,7 +493,8 @@ color: #007bff;
   }
 
   #home {
-    height: auto; 
+    height: auto;
+    min-height: 100vh;
     padding: 20px;
   }
 
@@ -525,12 +526,14 @@ color: #007bff;
     padding: 10px 15px;
   }
 
-  .projects-container, .skills-container {
+  .projects-container,
+  .skills-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .project, .skill-category {
+  .project,
+  .skill-category {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -556,8 +559,30 @@ color: #007bff;
     font-size: 0.8rem;
   }
 
-  #skills-section, .skill-category {
+  #skills-section,
+  .skill-category {
     width: 100%;
     padding: 10px;
+  }
+
+  .section {
+    padding: 30px 15px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .typing-animation {
+    font-size: 24px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
 }
