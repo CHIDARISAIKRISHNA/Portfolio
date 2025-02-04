@@ -1,0 +1,130 @@
+body {
+    color: white;
+    background: linear-gradient(to bottom, #0F172A, #1E293B);
+    scroll-behavior: smooth;
+    font-family: 'Times New Roman', serif;
+    font-size: large;
+}
+
+.circle-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid #3b82f6;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-icons a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #3b82f6;
+}
+
+.typing {
+    font-size: 2rem;
+    font-weight: bold;
+    color: orangered;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    h1, h2, h3 {
+        font-size: 24px; /* Smaller headings on mobile */
+    }
+
+    .circle-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .circle-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .text-left {
+        text-align: center;
+    }
+
+    .text-4xl {
+        font-size: 2.5rem;
+    }
+
+    .typing {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust layout for mobile */
+    .projects-section {
+        grid-template-columns: 1fr;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin: 0 8px;
+    }
+
+    /* Button adjustments */
+    a {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .bg-blue-600 {
+        padding: 0.8rem 1.5rem;
+    }
+
+    /* Form inputs and button adjustments */
+    input, textarea {
+        width: 100%;
+        padding: 0.8rem;
+        margin: 0.5rem 0;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    footer .fa {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust grid layout for smaller screens */
+    .projects-section {
+        grid-template-columns: 1fr; /* Stacked layout for projects */
+    }
+
+    .skills-section {
+        display: block; /* Stack skill sections vertically */
+    }
+}
