@@ -164,25 +164,28 @@ body {
     .lg\:text-left {
         text-align: center;
     }
-
-    /* Mobile skills section */
+/* Mobile-specific changes */
+@media (max-width: 768px) {
+    /* Skills section: Use a single-column grid layout for mobile */
     #skills .flex {
         display: grid;
         grid-template-columns: 1fr;
         gap: 16px;
     }
 
-    /* Adjust the grid to two columns if space allows */
+    /* Adjust the grid to two columns if the screen is wider on mobile devices */
     @media (min-width: 480px) and (max-width: 768px) {
         #skills .flex {
             grid-template-columns: repeat(2, 1fr);
         }
     }
+}
 
-    /* Original layout for larger screens */
-    @media (min-width: 769px) {
-        #skills .flex {
-            display: flex;
-        }
+/* Original layout for larger screens (laptop and beyond) */
+@media (min-width: 769px) {
+    #skills .flex {
+        display: flex;
+        justify-content: space-between;
     }
 }
+
