@@ -181,8 +181,8 @@ body {
 /* Individual Skill Category */
 .skill-category {
     flex: 1;
-    min-width: 250px;
-    max-width: 350px;
+    min-width: 100px;
+    max-width: 150px;
     background: rgba(17, 25, 40, 0.95);
     border-radius: 12px;
     padding: 1.5rem;
@@ -197,7 +197,7 @@ body {
 /* Skill Category Title */
 .skill-category h3 {
     color: #ff9ecd; /* Pink color */
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 1.25rem;
     text-align: left;
     font-weight: 600;
@@ -247,7 +247,7 @@ body {
     }
 
     .skills-title {
-        font-size: 2rem;
+        font-size: 1rem;
         margin-bottom: 1.5rem;
     }
 }
