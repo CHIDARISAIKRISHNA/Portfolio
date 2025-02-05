@@ -42,16 +42,31 @@ body {
 
 @media (max-width: 768px) {
     body {
-        font-size: 14px; /* Slightly smaller font size on mobile */
+        font-size: 14px; 
     }
 
     .container {
-        padding-left: 0.5rem; /* Reduce padding on mobile */
+        padding-left: 0.5rem; 
         padding-right: 0.5rem;
     }
+    nav ul {
+        flex-direction: column;  
+        padding-left: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; 
+    }
+
+    nav ul li a {
+        padding: 10px 15px;  
+        display: block;
+        text-align: center;
+    }
+
 
     h1 {
-        font-size: 1.8rem; /* Smaller heading on mobile */
+        font-size: 1.8rem; 
     }
 
     h2 {
@@ -63,9 +78,9 @@ body {
     }
 
     .circle-img {
-        width: 100px; /* Smaller profile image */
+        width: 100px; 
         height: 100px;
-        margin: 0 auto; /* Center image on mobile */
+        margin: 0 auto; 
     }
 
     .circle-img img {
@@ -75,75 +90,80 @@ body {
     }
 
     .text-left {
-        text-align: center; /* Center-align text for mobile */
+        text-align: center; 
     }
 
     .text-4xl {
-        font-size: 2rem; /* Adjust large text size */
+        font-size: 2rem; 
     }
 
     .typing {
-        font-size: 1.25rem; /* Adjust typing animation font size */
+        font-size: 1.25rem;
     }
 
-    /* Mobile layout for project section */
     .projects-section {
-        grid-template-columns: 1fr; /* Single column layout on mobile */
+        grid-template-columns: 1fr; 
     }
 
     .social-icons a {
-        font-size: 18px; /* Slightly smaller icons */
-        margin: 0 4px; /* Adjust margins */
+        font-size: 18px;
+        margin: 0 4px;
     }
 
     a {
-        padding: 0.75rem 1.25rem; /* Adjust button size */
+        padding: 0.75rem 1.25rem; 
         font-size: 0.95rem;
     }
 
     .bg-blue-600 {
-        padding: 0.6rem 1rem; /* Smaller padding for buttons */
+        padding: 0.6rem 1rem; 
     }
 
     input, textarea {
-        width: 100%; /* Full width inputs */
+        width: 100%; 
         padding: 0.8rem;
         margin: 0.5rem 0;
     }
 
     button[type="submit"] {
-        width: 100%; /* Full width submit button */
+        width: 100%; 
         padding: 0.9rem;
         font-size: 1rem;
     }
+    .skills-section {
+        display: block;
+    }
+
+    .skills-section div {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
 
     footer {
-        padding: 1rem 0.5rem; /* Smaller padding for footer */
+        padding: 1rem 0.5rem; 
     }
 
     footer .fa {
-        font-size: 1.2rem; /* Smaller footer icons */
+        font-size: 1.2rem; 
     }
 
     .skills-section {
-        display: block; /* Adjust for skills section */
+        display: block; 
     }
 
-    /* Stack the image and text vertically on mobile */
     .flex-col {
-        flex-direction: column; /* Stack content vertically */
+        flex-direction: column; 
     }
 
     .lg\:flex-row {
-        flex-direction: column; /* Override to vertical on smaller screens */
+        flex-direction: column; 
     }
 
     .lg\:mt-0 {
-        margin-top: 1.5rem; /* Add some margin to the image section */
+        margin-top: 1.5rem; 
     }
 
     .lg\:text-left {
-        text-align: center; /* Center text for better mobile view */
+        text-align: center; 
     }
 }
-
