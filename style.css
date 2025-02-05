@@ -166,6 +166,7 @@ body {
         text-align: center;
     }
 }
+
 /* Skills Section Container */
 .skills-section {
     display: flex;
@@ -195,7 +196,7 @@ body {
 
 /* Skill Category Title */
 .skill-category h3 {
-    color: #ff9ecd; /* Pink color from your image */
+    color: #ff9ecd; /* Pink color */
     font-size: 1.5rem;
     margin-bottom: 1.25rem;
     text-align: left;
@@ -227,7 +228,7 @@ body {
 .skills-title {
     width: 100%;
     text-align: center;
-    color: #00ffff; /* Cyan color from your image */
+    color: #00ffff; /* Cyan color */
     font-size: 2.5rem;
     margin-bottom: 2rem;
     font-weight: bold;
@@ -251,16 +252,15 @@ body {
     }
 }
 
-/* For medium screens */
 @media (min-width: 769px) and (max-width: 1024px) {
     .skill-category {
         min-width: calc(50% - 2rem);
     }
 }
 
-/* For larger screens */
 @media (min-width: 1025px) {
     .skill-category {
         width: calc(33.333% - 2rem);
     }
 }
+
