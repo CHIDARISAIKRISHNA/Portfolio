@@ -5,7 +5,6 @@ body {
     font-family: 'Times New Roman', serif;
     font-size: large;
 }
-
 .circle-img {
     width: 250px;
     height: 250px;
@@ -16,170 +15,126 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .circle-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 .social-icons a {
     font-size: 24px;
     margin: 0 10px;
     color: white;
     transition: 0.3s;
 }
-
 .social-icons a:hover {
     color: #3b82f6;
 }
-
 .typing {
     font-size: 2rem;
     font-weight: bold;
     color: orangered;
 }
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 768px) {
     body {
         font-size: 14px;
     }
-
     .container {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
-
     nav ul {
         flex-direction: column;
         padding-left: 0;
         align-items: center; 
     }
-
     nav ul li {
         margin-bottom: 10px;
     }
-
     nav ul li a {
         padding: 10px 15px;
         display: block;
         text-align: center;
     }
-
     h1 {
         font-size: 1.8rem;
     }
-
     h2 {
         font-size: 1.5rem;
     }
-
     h3 {
         font-size: 1.2rem;
     }
-
     .circle-img {
         width: 100px;
         height: 100px;
         margin: 0 auto;
     }
-
     .circle-img img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-
     .text-left {
         text-align: center;
     }
-
     .text-4xl {
         font-size: 2rem;
     }
-
     .typing {
         font-size: 1.25rem;
     }
-
     .projects-section {
         grid-template-columns: 1fr;
     }
-
     .social-icons a {
         font-size: 18px;
         margin: 0 4px;
     }
-
     a {
         padding: 0.75rem 1.25rem;
         font-size: 0.95rem;
     }
-
     .bg-blue-600 {
         padding: 0.6rem 1rem;
     }
-
     input, textarea {
         width: 100%;
         padding: 0.8rem;
         margin: 0.5rem 0;
     }
-
     button[type="submit"] {
         width: 100%;
         padding: 0.9rem;
         font-size: 1rem;
     }
-
     footer {
         padding: 1rem 0.5rem;
     }
-
     footer .fa {
         font-size: 1.2rem;
     }
-
     .flex-col {
         flex-direction: column;
     }
-
     .lg\:flex-row {
         flex-direction: column;
     }
-
     .lg\:mt-0 {
         margin-top: 1.5rem;
     }
-
     .lg\:text-left {
         text-align: center;
     }
-
-    /* Mobile skills section */
     #skills .flex {
         display: grid;
         grid-template-columns: 1fr;
         gap: 16px;
     }
-
-    /* Adjust the grid to two columns if space allows */
     @media (min-width: 480px) and (max-width: 768px) {
         #skills .flex {
             grid-template-columns: repeat(2, 1fr);
         }
     }
-
-    /* Original layout for larger screens */
     @media (min-width: 769px) {
         #skills .flex {
             display: flex;
