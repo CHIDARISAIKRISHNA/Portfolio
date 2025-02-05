@@ -164,28 +164,26 @@ body {
     .lg\:text-left {
         text-align: center;
     }
-/* Mobile-specific changes */
+/* Default layout for larger screens (laptops and desktops) */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Mobile layout (max-width: 768px) */
 @media (max-width: 768px) {
-    /* Skills section: Use a single-column grid layout for mobile */
-    #skills .flex {
+    .skills-container {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
+        grid-template-columns: 1fr;  /* Single column for mobile */
+        gap: 16px;  /* Gap between items */
     }
 
-    /* Adjust the grid to two columns if the screen is wider on mobile devices */
+    /* For medium-sized screens, use two columns if space allows */
     @media (min-width: 480px) and (max-width: 768px) {
-        #skills .flex {
-            grid-template-columns: repeat(2, 1fr);
+        .skills-container {
+            grid-template-columns: repeat(2, 1fr);  /* Two columns */
         }
     }
 }
 
-/* Original layout for larger screens (laptop and beyond) */
-@media (min-width: 769px) {
-    #skills .flex {
-        display: flex;
-        justify-content: space-between;
-    }
-}
 
