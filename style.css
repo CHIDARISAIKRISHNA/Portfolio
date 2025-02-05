@@ -40,55 +40,43 @@ body {
     color: orangered;
 }
 
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     body {
-        font-size: 14px; 
-        line-height: 1.6;
+        font-size: 14px;
     }
 
     .container {
-        padding-left: 0.5rem; 
+        padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
-/* Center the entire nav bar */
-nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the menu items horizontally */
-    justify-content: center; /* Center vertically */
-    list-style-type: none; /* Remove bullets */
-    padding: 0;
-    margin: 0;
-}
 
-nav ul li {
-    margin-bottom: 10px; /* Add space between nav items */
-}
+    nav ul {
+        flex-direction: column;
+        padding-left: 0;
+        align-items: center; /* Center the navbar options */
+    }
 
-nav ul li a {
-    padding: 10px 20px;
-    display: block;
-    text-align: center;
-    width: 100%; /* Full-width clickable area */
-    font-size: 1.2rem; /* Slightly larger font for visibility */
-}
+    nav ul li {
+        margin-bottom: 10px;
+    }
 
-/* Style Portfolio item to make it look special (if needed) */
-nav ul li:first-child a {
-    font-weight: bold;
-    color: #00ffff; /* Adjust the color for Portfolio if desired */
-}
-
-/* Ensure it sticks to the top */
-nav {
-    position: relative;
-    top: 0;
-    text-align: center;
-}
-
+    nav ul li a {
+        padding: 10px 15px;
+        display: block;
+        text-align: center;
+    }
 
     h1 {
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
     }
 
     h2 {
@@ -100,9 +88,9 @@ nav {
     }
 
     .circle-img {
-        width: 100px; 
+        width: 100px;
         height: 100px;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
 
     .circle-img img {
@@ -112,11 +100,11 @@ nav {
     }
 
     .text-left {
-        text-align: center; 
+        text-align: center;
     }
 
     .text-4xl {
-        font-size: 2rem; 
+        font-size: 2rem;
     }
 
     .typing {
@@ -124,7 +112,7 @@ nav {
     }
 
     .projects-section {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     .social-icons a {
@@ -133,83 +121,58 @@ nav {
     }
 
     a {
-        padding: 0.75rem 1.25rem; 
+        padding: 0.75rem 1.25rem;
         font-size: 0.95rem;
     }
 
     .bg-blue-600 {
-        padding: 0.6rem 1rem; 
+        padding: 0.6rem 1rem;
     }
 
     input, textarea {
-        width: 100%; 
+        width: 100%;
         padding: 0.8rem;
         margin: 0.5rem 0;
     }
 
     button[type="submit"] {
-        width: 100%; 
+        width: 100%;
         padding: 0.9rem;
         font-size: 1rem;
     }
+
     .skills-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center everything in the section */
-        padding: 1.5rem; /* Add more padding for spacing */
+        display: block;
+        text-align: center; /* Center align skills section */
     }
-    
-    .skills-section h2 {
-        font-size: 1.8rem; /* Larger heading size for mobile */
-        margin-bottom: 20px;
-        text-align: center;
-        color: #00ffff; /* Adjust for better visibility */
-    }
-    
+
     .skills-section div {
-        width: 100%; /* Ensure items are responsive */
-        padding: 10px;
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.1); /* Subtle background for contrast */
-        border-radius: 8px; /* Rounded corners */
-        margin-bottom: 15px; /* Spacing between sections */
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center; /* Center each skill */
     }
-    
-    .skills-section ul {
-        padding-left: 0;
-        list-style: none; /* No bullet points */
-    }
-    
-    .skills-section li {
-        padding: 5px 0; /* Space between list items */
-        font-size: 1.1rem;
-        text-align: center;
-    }
-    
-    
+
     footer {
-        padding: 1.5rem;
+        padding: 1rem 0.5rem;
     }
 
     footer .fa {
-        font-size: 1.2rem; 
+        font-size: 1.2rem;
     }
 
-    
-
     .flex-col {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .lg\:flex-row {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .lg\:mt-0 {
-        margin-top: 1.5rem; 
+        margin-top: 1.5rem;
     }
 
     .lg\:text-left {
-        text-align: center; 
+        text-align: center;
     }
 }
