@@ -62,7 +62,7 @@ body {
     nav ul {
         flex-direction: column;
         padding-left: 0;
-        align-items: center;
+        align-items: center; 
     }
 
     nav ul li {
@@ -141,7 +141,7 @@ body {
         font-size: 1rem;
     }
 
-
+   
     footer {
         padding: 1rem 0.5rem;
     }
@@ -166,5 +166,3 @@ body {
         text-align: center;
     }
 }
-
-
