@@ -62,7 +62,7 @@ body {
     nav ul {
         flex-direction: column;
         padding-left: 0;
-        align-items: center; /* Center the navbar options */
+        align-items: center;
     }
 
     nav ul li {
@@ -142,14 +142,15 @@ body {
     }
 
     .skills-section {
-        display: block;
-        text-align: center; /* Center align skills section */
+        display: grid; 
+        grid-template-columns: 1fr;
+        gap: 1.5rem; /* Adds space between skill categories */
+        text-align: center;
+        margin: 1.5rem 0;
     }
 
     .skills-section div {
-        width: 100%;
         margin-bottom: 20px;
-        text-align: center; /* Center each skill */
     }
 
     footer {
