@@ -21,7 +21,6 @@ function eraseEffect() {
         setTimeout(typeEffect, 500);
     }
 }
-
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeEffect, 500);
 });
