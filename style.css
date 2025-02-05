@@ -164,26 +164,25 @@ body {
     .lg\:text-left {
         text-align: center;
     }
-/* Default layout for larger screens (laptops and desktops) */
-.skills-container {
-    display: flex;
-    justify-content: space-between;
-}
 
-/* Mobile layout (max-width: 768px) */
-@media (max-width: 768px) {
-    .skills-container {
+    /* Mobile skills section */
+    #skills .flex {
         display: grid;
-        grid-template-columns: 1fr;  /* Single column for mobile */
-        gap: 16px;  /* Gap between items */
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
-    /* For medium-sized screens, use two columns if space allows */
+    /* Adjust the grid to two columns if space allows */
     @media (min-width: 480px) and (max-width: 768px) {
-        .skills-container {
-            grid-template-columns: repeat(2, 1fr);  /* Two columns */
+        #skills .flex {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Original layout for larger screens */
+    @media (min-width: 769px) {
+        #skills .flex {
+            display: flex;
         }
     }
 }
-
-
