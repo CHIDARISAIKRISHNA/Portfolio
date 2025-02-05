@@ -50,21 +50,27 @@ body {
         padding-right: 0.5rem;
     }
     nav ul {
-        flex-direction: column;  
-        padding-left: 0;
+        flex-direction: column;
+        align-items: center;  /* Center the menu items */
+        justify-content: center; /* Center horizontally */
     }
-
+    
     nav ul li {
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
     }
-
+    
     nav ul li a {
-        padding: 10px 15px;  
-        display: inline-block;
+        padding: 10px 15px;
+        display: block;
         text-align: center;
-        justify-content:center;
+        width: 100%; /* Make links take full width */
     }
-
+    
+    /* Keep the Portfolio item at the top */
+    nav ul li:first-child a {
+        font-weight: bold; /* Highlight the Portfolio option */
+    }
+    
 
     h1 {
         font-size: 1.8rem; 
@@ -132,14 +138,29 @@ body {
         font-size: 1rem;
     }
     .skills-section {
-        display: block;
+        display: flex;
+        flex-direction: column; /* Stack skills vertically */
+        align-items: center;    /* Center items */
+        padding: 1rem;
     }
-
+    
     .skills-section div {
-        width: 100%; 
-        margin-bottom: 20px; 
+        width: 100%;   /* Take full width on mobile */
+        margin-bottom: 20px;  /* Add space between items */
+        text-align: center;  /* Center align the text */
     }
-
+    
+    .skills-section h2 {
+        font-size: 1.5rem; /* Adjust size of the heading */
+        margin-bottom: 1rem;
+    }
+    
+    /* Improve readability and structure */
+    .skills-section ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
     footer {
         padding: 1rem 0.5rem; 
     }
@@ -148,9 +169,7 @@ body {
         font-size: 1.2rem; 
     }
 
-    .skills-section {
-        display: block; 
-    }
+    
 
     .flex-col {
         flex-direction: column; 
