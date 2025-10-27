@@ -1,4 +1,3 @@
-/* Light and Dark Theme Variables */
 :root {
     --bg-primary: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%);
     --bg-secondary: #1e293b;
@@ -13,7 +12,6 @@
     --button-secondary: #06b6d4;
     --hover-bg: rgba(6, 182, 212, 0.1);
 }
-
 [data-theme="light"] {
     --bg-primary: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
     --bg-secondary: #ffffff;
@@ -30,7 +28,6 @@
     --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
-
 body {
     color: var(--text-primary);
     background: var(--bg-primary);
@@ -41,7 +38,6 @@ body {
     overflow-x: hidden;
     transition: all 0.3s ease;
 }
-/* Hero section animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -100,7 +96,6 @@ body {
     }
 }
 
-/* Form message styling */
 .form-message {
     animation: slideDown 0.3s ease-out;
 }
@@ -134,7 +129,6 @@ body {
     text-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
 }
 
-/* Smooth scrolling for navigation links */
 .nav-link {
     position: relative;
     transition: all 0.3s ease;
@@ -156,7 +150,6 @@ body {
     width: 100%;
 }
 
-/* Mobile menu animations */
 #mobile-menu {
     transition: all 0.3s ease;
     transform: translateY(-100%);
@@ -170,7 +163,6 @@ body {
     visibility: visible;
 }
 
-/* Enhanced mobile responsiveness for theme toggle */
 @media (max-width: 768px) {
     #theme-toggle, #mobile-theme-toggle {
         min-width: 44px;
@@ -180,7 +172,6 @@ body {
         justify-content: center;
     }
     
-    /* Ensure proper spacing in mobile menu */
     #mobile-menu ul li:last-child {
         margin-top: 0.5rem;
         padding-top: 0.5rem;
@@ -188,7 +179,6 @@ body {
     }
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -206,7 +196,6 @@ body {
     background: linear-gradient(135deg, #0891b2, #2563eb);
 }
 
-/* Loading animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -222,7 +211,6 @@ body {
     animation: fadeInUp 0.6s ease-out;
 }
 
-/* Gradient text animation */
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -237,9 +225,7 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-/* Enhanced Mobile Responsive Design */
 
-/* Extra Small Devices (phones, 320px and up) */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
@@ -251,7 +237,6 @@ body {
         padding-right: 0.75rem;
     }
     
-    /* Mobile hero section */
     h1 {
         font-size: 2rem !important;
         line-height: 1.2;
@@ -265,7 +250,7 @@ body {
         font-size: 1.25rem;
     }
     
-    /* Mobile buttons */
+    
     .flex.flex-col.sm\:flex-row {
         flex-direction: column;
         gap: 0.75rem;
@@ -278,7 +263,7 @@ body {
         font-size: 0.9rem;
     }
     
-    /* Mobile navigation */
+   
     #mobile-menu {
         position: fixed;
         top: 100%;
@@ -296,31 +281,27 @@ body {
         display: block !important;
     }
     
-    /* Mobile sections */
+    
     section {
         padding: 2rem 0;
     }
     
-    /* Mobile cards */
     .bg-gray-800\/50 {
         padding: 1rem;
         margin-bottom: 1rem;
     }
     
-    /* Mobile form */
     input, textarea {
         padding: 0.75rem;
         font-size: 16px;
         border-radius: 0.5rem;
     }
     
-    /* Mobile social icons */
     .social-icons a {
         font-size: 18px;
         margin: 0 6px;
     }
     
-    /* Mobile footer */
     footer {
         padding: 1.5rem 0;
         text-align: center;
@@ -332,7 +313,6 @@ body {
     }
 }
 
-/* Small Devices (phones, 481px to 640px) */
 @media (min-width: 481px) and (max-width: 640px) {
     body {
         font-size: 15px;
@@ -365,7 +345,6 @@ body {
     }
 }
 
-/* Medium Devices (tablets, 641px to 768px) */
 @media (min-width: 641px) and (max-width: 768px) {
     body {
         font-size: 16px;
@@ -388,13 +367,11 @@ body {
         font-size: 1.75rem;
     }
     
-    /* Tablet grid adjustments */
     .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
     
-    /* Ensure projects grid is responsive */
     .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
         display: grid;
         grid-template-columns: 1fr;
@@ -422,7 +399,6 @@ body {
     }
 }
 
-/* Large Devices (small laptops, 769px to 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .container {
         padding-left: 2rem;
@@ -441,7 +417,6 @@ body {
         font-size: 2rem;
     }
     
-    /* Tablet grid */
     .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -456,7 +431,6 @@ body {
     }
 }
 
-/* Extra Large Devices (laptops and desktops, 1025px and up) */
 @media (min-width: 1025px) {
     .container {
         max-width: 1200px;
@@ -476,7 +450,6 @@ body {
         font-size: 2.5rem;
     }
     
-    /* Desktop grid */
     .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
@@ -491,7 +464,6 @@ body {
     }
 }
 
-/* Ultra Wide Screens (1400px and up) */
 @media (min-width: 1400px) {
     .container {
         max-width: 1400px;
@@ -514,9 +486,6 @@ body {
     }
 }
 
-/* Additional Responsive Improvements */
-
-/* Landscape Mobile Devices */
 @media (max-width: 768px) and (orientation: landscape) {
     .min-h-screen {
         min-height: auto;
@@ -536,7 +505,6 @@ body {
     }
 }
 
-/* Touch Device Optimizations */
 @media (hover: none) and (pointer: coarse) {
     .hover\:scale-105:hover {
         transform: scale(1.02);
@@ -545,8 +513,7 @@ body {
     .hover\:scale-110:hover {
         transform: scale(1.05);
     }
-    
-    /* Larger touch targets */
+
     button, a {
         min-height: 44px;
         min-width: 44px;
@@ -560,21 +527,18 @@ body {
     }
 }
 
-/* High DPI / Retina Displays */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .bg-gradient-to-r {
         background-size: 200% 200%;
     }
 }
 
-/* Dark mode support */
 @media (prefers-color-scheme: dark) {
     body {
         background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%);
     }
 }
 
-/* Reduced motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
     .typing,
     .gradient-text,
@@ -589,8 +553,6 @@ body {
         transition: none !important;
     }
 }
-
-/* Scroll to top button */
 #scroll-to-top {
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
@@ -603,10 +565,7 @@ body {
     box-shadow: 0 10px 25px rgba(6, 182, 212, 0.4);
     transform: translateY(-2px);
 }
-
-/* Comprehensive Light Theme Styles */
 [data-theme="light"] {
-    /* Background colors */
     --bg-primary: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
     --bg-secondary: #ffffff;
     --bg-tertiary: #f8fafc;
@@ -622,8 +581,6 @@ body {
     --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
-
-/* Light theme specific overrides */
 [data-theme="light"] body {
     background: var(--bg-primary) !important;
     color: var(--text-primary) !important;
@@ -729,8 +686,6 @@ body {
 [data-theme="light"] .border-t.border-gray-700 {
     border-top-color: var(--card-border) !important;
 }
-
-/* Section backgrounds for light theme */
 [data-theme="light"] section {
     background: var(--bg-primary) !important;
 }
@@ -755,20 +710,14 @@ body {
     background: var(--bg-secondary) !important;
     border-top-color: var(--card-border) !important;
 }
-
-/* Header styling for light theme */
 [data-theme="light"] header {
     background: var(--header-bg) !important;
     border-bottom: 1px solid var(--card-border) !important;
 }
-
-/* Mobile menu for light theme */
 [data-theme="light"] #mobile-menu {
     background: var(--header-bg) !important;
     border-top: 1px solid var(--card-border) !important;
 }
-
-/* Professional Button Styles */
 .btn-primary {
     background: var(--button-primary);
     color: white;
@@ -814,8 +763,6 @@ body {
     transform: translateY(-2px);
     box-shadow: var(--shadow-light);
 }
-
-/* Theme toggle button styles */
 #theme-toggle, #mobile-theme-toggle {
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
@@ -843,8 +790,6 @@ body {
     background-color: var(--bg-tertiary);
     box-shadow: var(--shadow-medium);
 }
-
-/* Ensure Font Awesome icons display properly */
 #theme-icon, #mobile-theme-icon {
     font-family: FontAwesome !important;
     font-style: normal;
@@ -855,8 +800,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-/* Fallback for when Font Awesome doesn't load */
 #theme-icon:before, #mobile-theme-icon:before {
     content: "☀";
     font-size: 16px;
@@ -870,13 +813,9 @@ body {
 #theme-icon.fa-sun:before, #mobile-theme-icon.fa-sun:before {
     content: "☀";
 }
-
-/* Force theme changes with higher specificity */
 [data-theme="light"] * {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
 }
-
-/* Ensure all text elements change color in light theme */
 [data-theme="light"] h1,
 [data-theme="light"] h2,
 [data-theme="light"] h3,
@@ -891,16 +830,12 @@ body {
 [data-theme="light"] div {
     color: var(--text-primary) !important;
 }
-
-/* Ensure gradients work in light theme */
 [data-theme="light"] .bg-gradient-to-r.from-cyan-400.to-blue-500 {
     background: linear-gradient(to right, var(--text-accent), #3b82f6) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
 }
-
-/* Print styles */
 @media print {
     body {
         background: white;
@@ -916,4 +851,5 @@ body {
         border: 1px solid #ccc !important;
     }
 }
+
 
