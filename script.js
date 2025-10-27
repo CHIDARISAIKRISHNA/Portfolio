@@ -1,9 +1,7 @@
-// Typing Animation
 const textArray = ["Full Stack Web Developer", "Software Developer"];
 let textIndex = 0;
 let charIndex = 0;
 const typingElement = document.querySelector(".typing");
-
 function typeEffect() {
     if (charIndex < textArray[textIndex].length) {
         typingElement.textContent += textArray[textIndex].charAt(charIndex);
@@ -13,7 +11,6 @@ function typeEffect() {
         setTimeout(eraseEffect, 2000);
     }
 }
-
 function eraseEffect() {
     if (charIndex > 0) {
         typingElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
@@ -24,8 +21,6 @@ function eraseEffect() {
         setTimeout(typeEffect, 500);
     }
 }
-
-// Mobile Menu Toggle
 function toggleMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -46,8 +41,6 @@ function toggleMobileMenu() {
         `;
     }
 }
-
-// Smooth Scrolling
 function smoothScrollTo(target) {
     const element = document.querySelector(target);
     if (element) {
@@ -60,8 +53,6 @@ function smoothScrollTo(target) {
         });
     }
 }
-
-// Close mobile menu when clicking on a link
 function closeMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -73,22 +64,17 @@ function closeMobileMenu() {
         </svg>
     `;
 }
-
-// Scroll to top functionality
 function scrollToTop() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 }
-
-// Intersection Observer for animations
 function setupIntersectionObserver() {
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -96,14 +82,10 @@ function setupIntersectionObserver() {
             }
         });
     }, observerOptions);
-
-    // Observe all sections
     document.querySelectorAll('section').forEach(section => {
         observer.observe(section);
     });
 }
-
-// Header background on scroll and scroll-to-top button
 function handleScroll() {
     const header = document.querySelector('header');
     const scrollToTopBtn = document.getElementById('scroll-to-top');
@@ -122,8 +104,6 @@ function handleScroll() {
         }
     }
 }
-
-// Form validation and submission
 function handleFormSubmit(event) {
     event.preventDefault();
     
@@ -133,28 +113,23 @@ function handleFormSubmit(event) {
         phone: event.target.phone.value.trim(),
         message: event.target.message.value.trim()
     };
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
+        if (!formData.name || !formData.email || !formData.message) {
         showMessage('Please fill in all required fields.', 'error');
         return;
     }
     
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
         showMessage('Please enter a valid email address.', 'error');
         return;
     }
     
-    // Show loading state
     const submitBtn = event.target.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
     
-    // Send form data to PHP script
     const formDataToSend = new FormData();
     formDataToSend.append('name', formData.name);
     formDataToSend.append('email', formData.email);
@@ -184,15 +159,12 @@ function handleFormSubmit(event) {
     });
 }
 
-// Show message function
 function showMessage(message, type) {
-    // Remove existing message if any
     const existingMessage = document.querySelector('.form-message');
     if (existingMessage) {
         existingMessage.remove();
     }
     
-    // Create message element
     const messageDiv = document.createElement('div');
     messageDiv.className = `form-message p-4 rounded-lg mb-4 text-center font-semibold ${
         type === 'success' 
@@ -201,11 +173,9 @@ function showMessage(message, type) {
     }`;
     messageDiv.textContent = message;
     
-    // Insert message before the form
     const form = document.getElementById('contact-form');
     form.parentNode.insertBefore(messageDiv, form);
     
-    // Auto-remove success messages after 5 seconds
     if (type === 'success') {
         setTimeout(() => {
             if (messageDiv.parentNode) {
@@ -214,24 +184,18 @@ function showMessage(message, type) {
         }, 5000);
     }
 }
-
-// Theme toggle functionality
 function toggleTheme() {
     const body = document.body;
     const currentTheme = body.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     
     console.log('Switching theme from', currentTheme, 'to', newTheme);
-    
-    // Update body theme attribute
     body.setAttribute('data-theme', newTheme);
     body.className = body.className.replace(/data-theme-\w+/g, '');
     body.classList.add(`data-theme-${newTheme}`);
     
-    // Save to localStorage
     localStorage.setItem('theme', newTheme);
     
-    // Force CSS variable update
     if (newTheme === 'light') {
         document.documentElement.style.setProperty('--bg-primary', 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%)');
         document.documentElement.style.setProperty('--text-primary', '#0f172a');
@@ -244,7 +208,6 @@ function toggleTheme() {
         document.documentElement.style.setProperty('--text-accent', '#06b6d4');
     }
     
-    // Update theme icons
     const themeIcon = document.getElementById('theme-icon');
     const mobileThemeIcon = document.getElementById('mobile-theme-icon');
     
@@ -256,22 +219,17 @@ function toggleTheme() {
         mobileThemeIcon.className = 'fa fa-sun text-lg group-hover:scale-110 transition-transform duration-300';
     }
     
-    // Force a reflow to ensure changes are applied
     body.offsetHeight;
 }
 
-// Initialize theme from localStorage
 function initializeTheme() {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     const body = document.body;
-    
     console.log('Initializing theme:', savedTheme);
-    
     body.setAttribute('data-theme', savedTheme);
     body.className = body.className.replace(/data-theme-\w+/g, '');
     body.classList.add(`data-theme-${savedTheme}`);
     
-    // Set CSS variables based on theme
     if (savedTheme === 'light') {
         document.documentElement.style.setProperty('--bg-primary', 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%)');
         document.documentElement.style.setProperty('--text-primary', '#0f172a');
@@ -296,81 +254,51 @@ function initializeTheme() {
     }
 }
 
-// Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-    // Initialize theme
-    initializeTheme();
-    
-    // Start typing animation
-    setTimeout(typeEffect, 1000);
-    
-    // Setup mobile menu
+    initializeTheme();    
+    setTimeout(typeEffect, 1000);    
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
     }
-    
-    // Setup theme toggles
     const themeToggle = document.getElementById('theme-toggle');
     const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
-    
     if (themeToggle) {
         themeToggle.addEventListener('click', toggleTheme);
     }
-    
     if (mobileThemeToggle) {
         mobileThemeToggle.addEventListener('click', toggleTheme);
-    }
-    
-    // Setup smooth scrolling for navigation links
+    }    
     document.querySelectorAll('.nav-link, .scroll-to').forEach(link => {
         link.addEventListener('click', function(e) {
-            const target = this.getAttribute('href');
-            
-            // Only prevent default and smooth scroll for internal anchor links
+            const target = this.getAttribute('href');            
             if (target.startsWith('#')) {
                 e.preventDefault();
                 smoothScrollTo(target);
                 closeMobileMenu();
             }
-            // For external links (like resume.html), let them navigate normally
-            // No preventDefault() and no smooth scrolling
         });
     });
-    
-    // Setup form submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', handleFormSubmit);
     }
-    
-    // Setup scroll handler
     window.addEventListener('scroll', handleScroll);
-    
-    // Setup scroll-to-top button
     const scrollToTopBtn = document.getElementById('scroll-to-top');
     if (scrollToTopBtn) {
         scrollToTopBtn.addEventListener('click', scrollToTop);
     }
-    
-    // Setup intersection observer for animations
     setupIntersectionObserver();
-    
-    // Add loading animation to elements
     document.querySelectorAll('section').forEach((section, index) => {
         section.style.animationDelay = `${index * 0.1}s`;
     });
 });
-
-// Handle window resize
 window.addEventListener('resize', () => {
     const mobileMenu = document.getElementById('mobile-menu');
     if (window.innerWidth > 768 && mobileMenu.classList.contains('show')) {
         closeMobileMenu();
     }
 });
-
-// Add keyboard navigation support
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         const mobileMenu = document.getElementById('mobile-menu');
@@ -379,3 +307,4 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
