@@ -13,7 +13,6 @@
         --card-bg: rgba(31, 41, 55, 0.5);
         --card-border: #374151;
     }
-
     [data-theme="light"] {
         --bg-primary: linear-gradient(to bottom, #f8fafc, #e2e8f0);
         --text-primary: #1e293b;
@@ -21,25 +20,21 @@
         --card-bg: rgba(255, 255, 255, 0.8);
         --card-border: #e2e8f0;
     }
-
     body {
         font-family:'Times New Roman', Times, serif;
         background: var(--bg-primary);
         color: var(--text-primary);
         transition: all 0.3s ease;
     }
-    
     .resume-container {
         text-align: center;
         margin-top: 30px;
     }
-
     h1 {
         font-size: 30px;
         margin-bottom: 20px;
         color: var(--text-accent);
     }
-    
     .back-link {
         position: absolute;
         top: 1px;
@@ -52,37 +47,31 @@
         background: var(--card-bg);
         backdrop-filter: blur(10px);
     }
-
     .back-link a {
         text-decoration: none;
         font-weight: bold;
         color: var(--text-accent);
     }
-    
     .back-link:hover {
         transform: scale(1.05);
         transition: transform 0.3s ease;
     }
-    
     iframe {
         border-radius: 12px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         border: 1px solid var(--card-border);
     }
-    
     @media (max-width: 768px) {
         .back-link {
             position: relative;
             display: inline-block;
             margin-bottom: 20px;
         }
-        
         iframe {
             height: 500px;
         }
     }
     </style>
-
 </head>
 <body data-theme="dark">
     <div class="resume-container" style="position: relative;">
@@ -97,49 +86,34 @@
         </li>
         <iframe src="Chidari_Sai_Krishna_Resume.pdf" width="100%" height="600px"></iframe>
     </div>
-    
     <script>
-        // Theme toggle functionality
         function toggleTheme() {
             const body = document.body;
             const currentTheme = body.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            
-            // Update theme icon
             const themeIcon = document.getElementById('theme-icon');
-            
             if (newTheme === 'light') {
                 themeIcon.className = 'fa fa-moon';
             } else {
                 themeIcon.className = 'fa fa-sun';
             }
         }
-
-        // Initialize theme from localStorage
         function initializeTheme() {
             const savedTheme = localStorage.getItem('theme') || 'dark';
             const body = document.body;
-            
             body.setAttribute('data-theme', savedTheme);
-            
             const themeIcon = document.getElementById('theme-icon');
-            
             if (savedTheme === 'light') {
                 themeIcon.className = 'fa fa-moon';
             } else {
                 themeIcon.className = 'fa fa-sun';
             }
         }
-
-        // Initialize theme when page loads
         document.addEventListener('DOMContentLoaded', () => {
             initializeTheme();
-            
-            // Setup theme toggle
-            const themeToggle = document.getElementById('theme-toggle');
+        const themeToggle = document.getElementById('theme-toggle');
             if (themeToggle) {
                 themeToggle.addEventListener('click', toggleTheme);
             }
@@ -147,3 +121,4 @@
     </script>
 </body>
 </html>
+
