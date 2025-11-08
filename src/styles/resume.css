@@ -1,0 +1,94 @@
+:root {
+    --bg-primary: linear-gradient(to bottom, #0F172A, #1E293B);
+    --text-primary: #ffffff;
+    --text-accent: #06b6d4;
+    --card-bg: rgba(31, 41, 55, 0.5);
+    --card-border: #374151;
+}
+
+[data-theme="light"] {
+    --bg-primary: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+    --text-primary: #1e293b;
+    --text-accent: #0891b2;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --card-border: #e2e8f0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.resume-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.resume-container h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--text-accent);
+}
+
+.back-link {
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    list-style-type: none;
+    font-size: 20px;
+    border: 3px solid var(--text-accent);
+    padding: 5px;
+    border-radius: 8px;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+}
+
+.back-link a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-accent);
+}
+
+.back-link:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.resume-container iframe {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--card-border);
+}
+
+.theme-toggle-btn {
+    padding: 8px;
+    border-radius: 8px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .back-link {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    
+    .resume-container iframe {
+        height: 500px;
+    }
+    
+    iframe[title="Resume PDF"] {
+        height: 600px !important;
+    }
+}
+

@@ -1,0 +1,79 @@
+/* Photo container with seamless blending */
+.hero-photo-container {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+/* Photo - seamlessly blend with background, natural appearance */
+.hero-photo {
+  /* Remove blend mode that might cause issues */
+  mix-blend-mode: normal;
+  
+  /* Natural image enhancement */
+  filter: 
+    contrast(1.1) 
+    brightness(1.03)
+    saturate(1.15);
+  
+  background: transparent !important;
+  
+  /* Soft, natural rounded edges */
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  
+  /* Subtle shadow for depth without harsh edges */
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  
+  /* Smooth rendering */
+  image-rendering: auto;
+  -webkit-image-rendering: auto;
+  position: relative;
+  z-index: 0;
+  
+  /* Smooth transitions */
+  transition: all 0.3s ease;
+}
+
+/* Gradient overlay that matches page background */
+.hero-photo-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    135deg,
+    rgba(51, 65, 85, 0.3),
+    rgba(71, 85, 105, 0.3),
+    rgba(51, 65, 85, 0.3)
+  );
+  border-radius: 2.1rem;
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0.6;
+}
+
+/* Subtle glow that extends the gradient */
+.hero-photo-container::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(
+    135deg,
+    rgba(51, 65, 85, 0.4),
+    rgba(71, 85, 105, 0.4),
+    rgba(51, 65, 85, 0.4)
+  );
+  border-radius: 2.3rem;
+  z-index: -2;
+  filter: blur(30px);
+  opacity: 0.4;
+}

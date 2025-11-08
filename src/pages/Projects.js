@@ -1,0 +1,47 @@
+import React, { useEffect } from 'react';
+import { useTheme } from '../context/ThemeContext';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
+import Projects from '../components/Projects';
+import '../styles/main.css';
+
+const ProjectsPage = () => {
+  const { theme } = useTheme();
+  
+  useEffect(() => {
+    // Scroll to top when page loads
+    window.scrollTo(0, 0);
+    
+    // Setup intersection observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-up');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className={`min-h-screen ${theme === 'dark' ? 'bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900 text-white' : 'bg-amber-50 text-gray-900'}`} data-theme={theme}>
+      <Header />
+      <Projects />
+      <Footer />
+      <ScrollToTop />
+    </div>
+  );
+};
+
+export default ProjectsPage;
